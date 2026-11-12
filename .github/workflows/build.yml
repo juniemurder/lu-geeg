@@ -1,0 +1,89 @@
+name: Build
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 90
+    permissions:
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            name: Windows x64
+            artifact: SHEETZ-windows-x64
+          - os: macos-14
+            name: macOS universal
+            artifact: SHEETZ-macos-universal
+          - os: ubuntu-latest
+            name: Linux x64
+            artifact: SHEETZ-linux-x64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Linux build dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            libasound2-dev \
+            libx11-dev \
+            libxext-dev \
+            libxinerama-dev \
+            libxrandr-dev \
+            libxcursor-dev \
+            libxcomposite-dev \
+            libfreetype6-dev \
+            libfontconfig1-dev \
+            libgl1-mesa-dev \
+            libglu1-mesa-dev \
+            libxrender-dev \
+            mesa-common-dev \
+            pkg-config
+
+      - name: Cache JUCE source
+        uses: actions/cache@v4
+        with:
+          path: build/_deps
+          key: ${{ runner.os }}-juce-8.0.8-${{ hashFiles('CMakeLists.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-juce-8.0.8-
+
+      - name: Configure
+        shell: bash
+        run: |
+          args=(-S . -B build -DCMAKE_BUILD_TYPE=Release)
+
+          if [[ "$RUNNER_OS" == "macOS" ]]; then
+            args+=("-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64")
+          fi
+
+          cmake "${args[@]}"
+
+      - name: Build VST3 and Standalone
+        shell: bash
+        run: cmake --build build --config Release --target SHEETZ_VST3 SHEETZ_Standalone --parallel 4
+
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: build/SHEETZ_artefacts/**
+          if-no-files-found: error
+          retention-days: 30
