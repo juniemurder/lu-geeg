@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="680" viewBox="0 0 1040 680" role="img" aria-labelledby="title desc">
+  <title id="title">SHEETZ! plugin interface preview</title>
+  <desc id="desc">A baby-blue sky interface with drifting clouds, a shaper rail, a drawable filter curve and cloud-white controls.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCE8FF"/>
+      <stop offset="1" stop-color="#F0FBFF"/>
+    </linearGradient>
+    <linearGradient id="horizon" x1="0" y1="460" x2="0" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF1D6" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFF0D2" stop-opacity="0.45"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="890" cy="92" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE6A8" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#FFE6A8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFE6A8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="knobBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4F6FF"/>
+    </linearGradient>
+    <linearGradient id="curveFill" x1="0" y1="142" x2="0" y2="510" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9B8CFF" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#9B8CFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+
+    <symbol id="cloud" viewBox="0 0 200 80">
+      <ellipse cx="52" cy="52" rx="50" ry="26"/>
+      <ellipse cx="95" cy="36" rx="44" ry="32"/>
+      <ellipse cx="140" cy="50" rx="48" ry="27"/>
+      <rect x="14" y="48" width="168" height="30" rx="15"/>
+    </symbol>
+  </defs>
+
+  <rect width="1040" height="680" rx="18" fill="url(#sky)"/>
+
+  <circle cx="890" cy="92" r="180" fill="url(#sun)"/>
+  <circle cx="890" cy="92" r="30" fill="#FFF2C4" opacity="0.8"/>
+
+  <g fill="#FFFFFF" filter="url(#soft)">
+    <use href="#cloud" x="20" y="52" width="300" height="120" opacity="0.26"/>
+    <use href="#cloud" x="680" y="18" width="250" height="100" opacity="0.18"/>
+    <use href="#cloud" x="300" y="128" width="390" height="156" opacity="0.12"/>
+    <use href="#cloud" x="820" y="226" width="270" height="108" opacity="0.16"/>
+    <use href="#cloud" x="66" y="372" width="430" height="172" opacity="0.11"/>
+    <use href="#cloud" x="600" y="444" width="350" height="140" opacity="0.12"/>
+    <use href="#cloud" x="180" y="548" width="520" height="208" opacity="0.18"/>
+    <use href="#cloud" x="748" y="612" width="600" height="240" opacity="0.2"/>
+  </g>
+
+  <rect y="460" width="1040" height="220" fill="url(#horizon)"/>
+
+  <!-- header brand -->
+  <g>
+    <ellipse cx="31.5" cy="30" rx="8.5" ry="8" fill="#FFFFFF" opacity="0.4"/>
+    <ellipse cx="41" cy="24" rx="10" ry="10" fill="#FFFFFF" opacity="0.4"/>
+    <ellipse cx="51" cy="31" rx="8" ry="7.5" fill="#FFFFFF" opacity="0.4"/>
+    <rect x="25" y="30" width="33" height="9" rx="4.5" fill="#FFFFFF" opacity="0.4"/>
+    <path d="M23 30 a8.5 8.5 0 0 1 17 -0.5 a10 10 0 0 1 20 0.5 a8 8 0 0 1 16 0.5 v4 a3 3 0 0 1 -3 3 h-47 a3 3 0 0 1 -3 -3 z"
+          fill="none" stroke="#3E9FD3" stroke-opacity="0.7" stroke-width="1.1"/>
+  </g>
+  <text x="68" y="35" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#24536F">SHEETZ</text>
+  <text x="205" y="35" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#3E9FD3">!</text>
+  <text x="70" y="50" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#24536F" fill-opacity="0.46">CLOUD MODULATION</text>
+
+  <!-- preset browser -->
+  <rect x="264" y="24" width="420" height="34" rx="9" fill="#FFFFFF" fill-opacity="0.86" stroke="#2A6688" stroke-opacity="0.2"/>
+  <text x="278" y="46" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#24536F">Cloud Nine</text>
+  <path d="M656 38 l4 4 l4 -4" fill="none" stroke="#2C86B4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- header buttons -->
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#24536F">
+    <rect x="712" y="26" width="30" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="727" y="45">&lt;</text>
+    <rect x="746" y="26" width="30" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="761" y="45">&gt;</text>
+    <rect x="784" y="26" width="58" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="813" y="45">SAVE</text>
+    <rect x="846" y="26" width="64" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="878" y="45">IMPORT</text>
+    <rect x="914" y="26" width="64" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="946" y="45">EXPORT</text>
+    <rect x="982" y="26" width="44" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.25"/>
+    <text x="1004" y="45">DIR</text>
+  </g>
+
+  <!-- module rail -->
+  <text x="14" y="93" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="0.6" fill="#24536F" fill-opacity="0.48">SHAPERS</text>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <!-- Volume -->
+    <rect x="14" y="100" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect x="16" y="113" width="3.5" height="44" rx="2" fill="#4FB3E8" opacity="0.65"/>
+    <text x="30" y="125" font-size="12.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Volume</text>
+    <circle cx="118" cy="114" r="4.5" fill="none" stroke="#24536F" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M30 154 C38 140 46 140 54 154 S70 168 78 154 S94 140 102 154 S118 168 126 154" fill="none" stroke="#4FB3E8" stroke-opacity="0.35" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Filter (selected) -->
+    <rect x="14" y="176" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.95"/>
+    <rect x="15" y="177" width="122" height="68" rx="13" fill="none" stroke="#9B8CFF" stroke-width="1.5"/>
+    <rect x="16" y="189" width="3.5" height="44" rx="2" fill="#9B8CFF"/>
+    <text x="30" y="201" font-size="12.5" font-weight="700" fill="#24536F">Filter</text>
+    <circle cx="118" cy="190" r="7" fill="#9B8CFF" fill-opacity="0.25"/>
+    <circle cx="118" cy="190" r="4.5" fill="#9B8CFF"/>
+    <path d="M30 230 C46 230 54 200 70 200 S94 226 110 226 S120 230 126 230" fill="none" stroke="#9B8CFF" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Pan -->
+    <rect x="14" y="252" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect x="16" y="265" width="3.5" height="44" rx="2" fill="#5FD6B4" opacity="0.65"/>
+    <text x="30" y="277" font-size="12.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Pan</text>
+    <circle cx="118" cy="266" r="4.5" fill="none" stroke="#24536F" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M30 306 C50 286 70 286 90 306 S116 326 126 306" fill="none" stroke="#5FD6B4" stroke-opacity="0.35" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Width -->
+    <rect x="14" y="328" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect x="16" y="341" width="3.5" height="44" rx="2" fill="#FFB38A" opacity="0.65"/>
+    <text x="30" y="353" font-size="12.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Width</text>
+    <circle cx="118" cy="342" r="4.5" fill="none" stroke="#24536F" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M30 382 L58 358 L86 382 L110 362 L126 374" fill="none" stroke="#FFB38A" stroke-opacity="0.4" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Drive -->
+    <rect x="14" y="404" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect x="16" y="417" width="3.5" height="44" rx="2" fill="#FF8E8E" opacity="0.65"/>
+    <text x="30" y="429" font-size="12.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Drive</text>
+    <circle cx="118" cy="418" r="4.5" fill="none" stroke="#24536F" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M30 458 C54 458 60 438 74 438 S96 452 110 452 S122 458 126 458" fill="none" stroke="#FF8E8E" stroke-opacity="0.4" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Crush -->
+    <rect x="14" y="480" width="124" height="70" rx="14" fill="#FFFFFF" fill-opacity="0.4" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <rect x="16" y="493" width="3.5" height="44" rx="2" fill="#EFC75E" opacity="0.65"/>
+    <text x="30" y="505" font-size="12.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Crush</text>
+    <circle cx="118" cy="494" r="4.5" fill="none" stroke="#24536F" stroke-opacity="0.35" stroke-width="1.4"/>
+    <path d="M30 530 L52 530 L52 514 L74 514 L74 530 L96 530 L96 510 L118 510 L118 526 L126 526" fill="none" stroke="#EFC75E" stroke-opacity="0.5" stroke-width="1.8" stroke-linejoin="round"/>
+  </g>
+
+  <!-- curve panel -->
+  <rect x="148" y="78" width="644" height="462" rx="18" fill="#FFFFFF" fill-opacity="0.16" stroke="#FFFFFF" stroke-opacity="0.38"/>
+
+  <text x="160" y="107" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#24536F">FILTER SHAPER</text>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle">
+    <rect x="504" y="95" width="50" height="24" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.2"/>
+    <text x="529" y="111" fill="#24536F">FLIP</text>
+    <rect x="560" y="95" width="50" height="24" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.2"/>
+    <text x="585" y="111" fill="#24536F">RESET</text>
+    <rect x="616" y="95" width="52" height="24" rx="9" fill="#3E9FD3" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="642" y="111" fill="#FFFFFF">SNAP</text>
+    <rect x="676" y="93" width="104" height="28" rx="9" fill="#FFFFFF" fill-opacity="0.86" stroke="#2A6688" stroke-opacity="0.2"/>
+    <text x="721" y="111" font-size="11" font-weight="400" fill="#24536F">1/4</text>
+    <path d="M762 105 l3.5 3.5 l3.5 -3.5" fill="none" stroke="#2C86B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- plot grid -->
+  <g stroke="#2A6688">
+    <g stroke-opacity="0.1" stroke-width="0.7">
+      <path d="M211 142 V510 M248 142 V510 M285 142 V510 M359 142 V510 M396 142 V510 M433 142 V510 M507 142 V510 M544 142 V510 M581 142 V510 M655 142 V510 M692 142 V510 M729 142 V510"/>
+      <path d="M174 188 H766 M174 234 H766 M174 280 H766 M174 418 H766 M174 464 H766"/>
+    </g>
+    <g stroke-opacity="0.19" stroke-width="1.2">
+      <path d="M322 142 V510 M470 142 V510 M618 142 V510"/>
+      <path d="M174 326 H766 M174 142 H766 M174 510 H766"/>
+    </g>
+  </g>
+
+  <text x="174" y="137" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#24536F" fill-opacity="0.38">OPEN</text>
+  <text x="174" y="524" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#24536F" fill-opacity="0.38">DARK</text>
+
+  <!-- neutral line -->
+  <path d="M174 326 H766" stroke="#9B8CFF" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="4 5"/>
+
+  <!-- modulation curve -->
+  <path d="M174 461 C212 461 238 420 266 388 C294 356 320 300 348 282 C376 264 402 268 430 290 C458 312 484 360 512 384 C540 408 566 428 594 438 C622 448 648 452 676 456 C704 460 736 461 766 461 L766 510 L174 510 Z"
+        fill="url(#curveFill)"/>
+  <path d="M174 461 C212 461 238 420 266 388 C294 356 320 300 348 282 C376 264 402 268 430 290 C458 312 484 360 512 384 C540 408 566 428 594 438 C622 448 648 452 676 456 C704 460 736 461 766 461"
+        fill="none" stroke="#9B8CFF" stroke-opacity="0.18" stroke-width="7" stroke-linecap="round"/>
+  <path d="M174 461 C212 461 238 420 266 388 C294 356 320 300 348 282 C376 264 402 268 430 290 C458 312 484 360 512 384 C540 408 566 428 594 438 C622 448 648 452 676 456 C704 460 736 461 766 461"
+        fill="none" stroke="#8B7BF2" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- curve points -->
+  <g fill="#FFFFFF" stroke="#8B7BF2" stroke-width="1.8">
+    <circle cx="174" cy="461" r="4.5"/>
+    <circle cx="348" cy="282" r="4.5"/>
+    <circle cx="512" cy="384" r="4.5"/>
+    <circle cx="766" cy="461" r="4.5"/>
+  </g>
+
+  <!-- playhead -->
+  <path d="M547 142 V510" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="1.2"/>
+  <circle cx="547" cy="356" r="9" fill="#FFD27A" fill-opacity="0.25"/>
+  <circle cx="547" cy="356" r="4" fill="#FFC85A"/>
+
+  <!-- global panel -->
+  <rect x="148" y="548" width="644" height="100" rx="18" fill="#FFFFFF" fill-opacity="0.24" stroke="#FFFFFF" stroke-opacity="0.46"/>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" text-anchor="middle">
+    <!-- Mix -->
+    <text x="302" y="575" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Mix</text>
+    <path d="M286.4 621.6 A22 22 0 1 1 317.6 621.6" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <path d="M286.4 621.6 A22 22 0 1 1 317.6 621.6" fill="none" stroke="#3E9FD3" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="302" cy="606" r="16" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <path d="M302 606 L310.5 614.5" stroke="#2C86B4" stroke-width="2" stroke-linecap="round"/>
+    <text x="302" y="640" font-size="9.5" fill="#24536F" fill-opacity="0.78">100 %</text>
+
+    <!-- Smooth -->
+    <text x="414" y="575" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Smooth</text>
+    <path d="M398.4 621.6 A22 22 0 1 1 429.6 621.6" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <path d="M398.4 621.6 A22 22 0 0 1 392.5 610.8" fill="none" stroke="#3E9FD3" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="414" cy="606" r="16" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <path d="M414 606 L402.3 608.6" stroke="#2C86B4" stroke-width="2" stroke-linecap="round"/>
+    <text x="414" y="640" font-size="9.5" fill="#24536F" fill-opacity="0.78">4.0 ms</text>
+
+    <!-- Output -->
+    <text x="526" y="575" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Output</text>
+    <path d="M510.4 621.6 A22 22 0 1 1 541.6 621.6" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <path d="M510.4 621.6 A22 22 0 1 1 541.8 590.7" fill="none" stroke="#3E9FD3" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="526" cy="606" r="16" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <path d="M526 606 L534.6 597.6" stroke="#2C86B4" stroke-width="2" stroke-linecap="round"/>
+    <text x="526" y="640" font-size="9.5" fill="#24536F" fill-opacity="0.78">0.0 dB</text>
+
+    <!-- Phase -->
+    <text x="638" y="575" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Phase</text>
+    <path d="M622.4 621.6 A22 22 0 1 1 653.6 621.6" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="638" cy="606" r="16" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <path d="M638 606 L629.5 614.5" stroke="#2C86B4" stroke-width="2" stroke-linecap="round"/>
+    <text x="638" y="640" font-size="9.5" fill="#24536F" fill-opacity="0.78">0&#176;</text>
+  </g>
+
+  <!-- right panel -->
+  <rect x="802" y="78" width="224" height="570" rx="18" fill="#FFFFFF" fill-opacity="0.24" stroke="#FFFFFF" stroke-opacity="0.46"/>
+
+  <text x="814" y="107" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#24536F" fill-opacity="0.9">SHAPE  /  FILTER</text>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="914" y="129" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Depth</text>
+
+    <!-- depth knob -->
+    <path d="M890.7 197.3 A33 33 0 1 1 937.3 197.3" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="4" stroke-linecap="round"/>
+    <path d="M890.7 197.3 A33 33 0 1 1 946 165.8" fill="none" stroke="#9B8CFF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="914" cy="174" r="24" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.7"/>
+    <path d="M914 174 L933.4 169" stroke="#7A68E8" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="914" cy="174" r="2.2" fill="#7A68E8"/>
+    <text x="914" y="221" font-size="10" fill="#24536F" fill-opacity="0.78">78 %</text>
+
+    <text x="914" y="252" font-size="9.5" fill="#24536F" fill-opacity="0.62">Cutoff = centre.</text>
+    <text x="914" y="266" font-size="9.5" fill="#24536F" fill-opacity="0.62">Sweeps up to 5 octaves.</text>
+
+    <!-- cutoff -->
+    <text x="864" y="293" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Cutoff</text>
+    <path d="M852.7 347.3 A16 16 0 1 1 875.3 347.3" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <path d="M852.7 347.3 A16 16 0 0 1 858.1 321.1" fill="none" stroke="#9B8CFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="864" cy="336" r="11.5" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.7"/>
+    <path d="M864 336 L861.1 328.6" stroke="#7A68E8" stroke-width="2" stroke-linecap="round"/>
+    <text x="864" y="363" font-size="9.5" fill="#24536F" fill-opacity="0.78">700 Hz</text>
+
+    <!-- resonance -->
+    <text x="964" y="293" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.62">Reso</text>
+    <path d="M952.7 347.3 A16 16 0 1 1 975.3 347.3" fill="none" stroke="#24536F" stroke-opacity="0.19" stroke-width="3" stroke-linecap="round"/>
+    <path d="M952.7 347.3 A16 16 0 0 1 948.9 330.6" fill="none" stroke="#9B8CFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="964" cy="336" r="11.5" fill="url(#knobBody)" stroke="#FFFFFF" stroke-opacity="0.7"/>
+    <path d="M964 336 L956.5 333.3" stroke="#7A68E8" stroke-width="2" stroke-linecap="round"/>
+    <text x="964" y="363" font-size="9.5" fill="#24536F" fill-opacity="0.78">1.4</text>
+
+    <!-- filter mode -->
+    <rect x="828" y="380" width="172" height="30" rx="9" fill="#FFFFFF" fill-opacity="0.85" stroke="#2A6688" stroke-opacity="0.2"/>
+    <text x="842" y="400" font-size="11" fill="#24536F" text-anchor="start">Low-pass</text>
+    <path d="M978 393 l3.5 3.5 l3.5 -3.5" fill="none" stroke="#2C86B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- module on -->
+    <rect x="838" y="562" width="152" height="28" rx="9" fill="#9B8CFF" stroke="#FFFFFF" stroke-opacity="0.4"/>
+    <text x="914" y="581" font-size="10" font-weight="700" fill="#FFFFFF">MODULE ON</text>
+    <text x="914" y="614" font-size="9.5" font-weight="700" fill="#24536F" fill-opacity="0.55">Filter  /  Pastel Sweep</text>
+  </g>
+
+  <!-- footer -->
+  <text x="520" y="660" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9.5" text-anchor="middle" fill="#24536F" fill-opacity="0.58">DRAW THE CURVE  |  double-click a point to delete  |  shift-click for a hold step  |  right-drag for tension</text>
+  <text x="988" y="668" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="8.5" text-anchor="end" fill="#24536F" fill-opacity="0.35">v1.0</text>
+
+  <rect x="0.5" y="0.5" width="1039" height="679" rx="18" fill="none" stroke="#FFFFFF" stroke-opacity="0.45"/>
+</svg>

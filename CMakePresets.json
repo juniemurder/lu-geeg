@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "release",
+      "displayName": "Release",
+      "description": "Configure a release build of the VST3 and standalone app.",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "displayName": "Build VST3 and Standalone",
+      "configurePreset": "release",
+      "configuration": "Release",
+      "targets": [
+        "SHEETZ_VST3",
+        "SHEETZ_Standalone"
+      ],
+      "jobs": 4
+    }
+  ]
+}
